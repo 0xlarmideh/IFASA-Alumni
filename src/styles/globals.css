@@ -2,4 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
 
+background: linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
+
+background: -moz-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
+
+background: -webkit-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
+padding: 2rem 0;
+}
+
+#app {
+  max-width: 700px;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #02252e;
+}
+
+/* .green-bg {
+  background: hsla(192, 92%, 9%, 1);
+
+background: linear-gradient(90deg, hsla(192, 92%, 9%, 1) 0%, hsla(170, 91%, 13%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(192, 92%, 9%, 1) 0%, hsla(170, 91%, 13%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(192, 92%, 9%, 1) 0%, hsla(170, 91%, 13%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#02252E", endColorstr="#034036", GradientType=1 );
+} */

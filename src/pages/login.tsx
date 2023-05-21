@@ -20,9 +20,9 @@ const Login = () => {
 
   };
   const inputClassName =
-    "border-2 p-4 rounded-[10px] focus:border-sky-400 outline-none invalid:border-red-600 invalid:text-red-700 ";
+    "border-2 border-slate-400 p-4 rounded-[10px] bg-primary text-white focus:border-orange-400 focus:bg-tertiary outline-none invalid:border-red-600 invalid:text-red-700 ";
   return (
-    <div className="h-screen flex flex-col justify-center items-center text-black mx-auto my-0 max-w-[600px] p-4 ">
+    <div className="h-screen text-black mx-auto my-0 max-w-[450px] p-4">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
         <h1 className="text-[2.4rem] tracking-tighter mb-6">
           Sign in to IFASA Hub
@@ -42,7 +42,7 @@ const Login = () => {
           })}
           className={inputClassName}
         />
-        <button type="submit" className="border-2 p-[10px] rounded-full ">
+        <button type="submit" className="border-2 p-[10px] bg-white text-black rounded-full ">
           Login
         </button>
         <button
@@ -54,7 +54,7 @@ const Login = () => {
       </form>
       <div className="mt-6">
         Don't have an account?
-        <span className="text-sky-600">
+        <span className="text-secondary">
           <Link href="/signup"> Sign Up</Link>
         </span>
       </div>
