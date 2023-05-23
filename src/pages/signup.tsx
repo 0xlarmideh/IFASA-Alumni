@@ -37,7 +37,7 @@ const SignUp = () => {
     <div className="gradient w-full h-full">
       <div className="h-screen text-black mx-auto my-0 max-w-[450px] p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
-          <h1 className="text-[2.4rem] tracking-tighter mb-6">
+          <h1 className="text-[3.2rem] heading text-white text-center leading-[3.4rem] tracking-tighter my-6">
             Join IFASA Hub today
           </h1>
           <input
@@ -89,12 +89,12 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="border-2 p-[10px] rounded-full bg-black text-white "
+            className="p-[10px] rounded-full bg-secondary text-white "
           >
             Sign Up
           </button>
         </form>
-        <div className="mt-6">
+        <div className="mt-6 text-white">
           Have an account already?
           <span className="text-secondary">
             <Link href="/login"> Log in</Link>

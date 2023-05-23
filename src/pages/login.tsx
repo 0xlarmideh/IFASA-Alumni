@@ -22,10 +22,10 @@ const Login = () => {
   const inputClassName =
     "border-2 border-slate-400 p-4 rounded-[10px] bg-primary text-white focus:border-orange-400 focus:bg-tertiary outline-none invalid:border-red-600 invalid:text-red-700 ";
   return (
-    <div className="gradient w-full h-full">
+    <div className="gradient w-full h-full ">
       <div className="h-screen text-black mx-auto my-0 max-w-[450px] p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
-          <h1 className="text-[2.4rem] tracking-tighter mb-6">
+          <h1 className="text-[3.2rem] heading text-white text-center leading-[3.4rem] tracking-tighter my-6">
             Sign in to IFASA Hub
           </h1>
           <input
@@ -36,16 +36,35 @@ const Login = () => {
             placeholder="Email address"
             className={inputClassName}
           />
+          {errors.email && (
+            <p className="text-red-800 font-medium" role="alert">
+              {errors.email?.message}{" "}
+            </p>
+          )}
           <input
             placeholder="Password"
             {...register("password", {
               required: "Please input your password",
+              minLength: {
+                value: 4,
+                message: "***Password must be a minimum of 4 characters",
+              },
+              maxLength: {
+                value: 12,
+                message: "***Password length can't be more than 12 characters",
+              },
             })}
             className={inputClassName}
           />
+          {errors.password && (
+            <p className="text-red-800 font-medium" role="alert">
+              {errors.password?.message}{" "}
+            </p>
+          )}
+
           <button
             type="submit"
-            className="border-2 p-[10px] bg-white text-black rounded-full "
+            className="p-[10px] bg-secondary text-black rounded-full "
           >
             Login
           </button>
@@ -56,7 +75,7 @@ const Login = () => {
             Forgot password
           </button>
         </form>
-        <div className="mt-6">
+        <div className="mt-6 text-white">
           Don't have an account?
           <span className="text-secondary">
             <Link href="/signup"> Sign Up</Link>

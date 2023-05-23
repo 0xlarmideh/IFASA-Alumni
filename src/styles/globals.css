@@ -1,36 +1,56 @@
+@import url("https://fonts.cdnfonts.com/css/pwscratchedfont");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .gradient {
+  background: linear-gradient(
+    to right top,
+    #02252e,
+    #00565b,
+    #008a6a,
+    #0dbe57,
+    #a8eb12
+  );
 
-background: linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
+  background: -moz-linear-gradient(
+    to right top,
+    #02252e,
+    #00565b,
+    #008a6a,
+    #0dbe57,
+    #a8eb12
+  );
 
-background: -moz-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
-
-background: -webkit-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
-/* padding: 2rem 0; */
+  background: -webkit-linear-gradient(
+    to right top,
+    #02252e,
+    #00565b,
+    #008a6a,
+    #0dbe57,
+    #a8eb12
+  );
+  /* padding: 2rem 0; */
 }
 
-#app {
-  max-width: 700px;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 12px;
-  background: #02252e;
+.heading {
+  font-family: "PWScratchedfont", sans-serif;
 }
 
-.nav-link, .active {
+
+.nav-link,
+.active {
   color: #fff;
   text-decoration: none;
   font-size: 2.2rem;
   font-weight: medium;
-  padding: .4rem 0rem;
-  margin: 2.4rem 3rem;
+  padding: 0.4rem 0rem;
+  margin: 2.4rem 6rem;
 }
 
 .nav-link {
-  border-bottom:  3px transparent ;
+  border-bottom: 3px transparent;
 }
 
 .active {
