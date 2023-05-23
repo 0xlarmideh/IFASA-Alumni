@@ -37,7 +37,7 @@ const SignUp = () => {
     <div className="gradient w-full h-full">
       <div className="h-screen text-black mx-auto my-0 max-w-[450px] p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
-          <h1 className="text-[3.2rem] heading text-white text-center leading-[3.4rem] tracking-tighter my-6">
+          <h1 className="text-[3.2rem] max-md:text-[2.7rem] heading text-white text-center leading-[3.4rem] tracking-tighter my-6">
             Join IFASA Hub today
           </h1>
           <input

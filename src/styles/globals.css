@@ -38,6 +38,11 @@
   font-family: "PWScratchedfont", sans-serif;
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 
 .nav-link,
 .active {
