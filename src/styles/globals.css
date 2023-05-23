@@ -9,7 +9,7 @@ background: linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a
 background: -moz-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
 
 background: -webkit-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
-padding: 2rem 0;
+/* padding: 2rem 0; */
 }
 
 #app {
@@ -20,14 +20,19 @@ padding: 2rem 0;
   background: #02252e;
 }
 
-/* .green-bg {
-  background: hsla(192, 92%, 9%, 1);
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: medium;
+  padding: .4rem 0rem;
+  margin: 2.4rem 3rem;
+}
 
-background: linear-gradient(90deg, hsla(192, 92%, 9%, 1) 0%, hsla(170, 91%, 13%, 1) 100%);
+.nav-link:active {
+  border-bottom: 2px solid #fbb03b;
+}
 
-background: -moz-linear-gradient(90deg, hsla(192, 92%, 9%, 1) 0%, hsla(170, 91%, 13%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(192, 92%, 9%, 1) 0%, hsla(170, 91%, 13%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#02252E", endColorstr="#034036", GradientType=1 );
-} */
+.nav-link:hover {
+  border-bottom: 2px solid #ffffff;
+}
