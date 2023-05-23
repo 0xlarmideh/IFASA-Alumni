@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.gradient {
 
 background: linear-gradient(to right top, #02252e, #00565b, #008a6a, #0dbe57, #a8eb12);
 
@@ -20,7 +20,7 @@ background: -webkit-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0d
   background: #02252e;
 }
 
-.nav-link {
+.nav-link, .active {
   color: #fff;
   text-decoration: none;
   font-size: 2.2rem;
@@ -29,10 +29,14 @@ background: -webkit-linear-gradient(to right top, #02252e, #00565b, #008a6a, #0d
   margin: 2.4rem 3rem;
 }
 
-.nav-link:active {
-  border-bottom: 2px solid #fbb03b;
+.nav-link {
+  border-bottom:  3px transparent ;
+}
+
+.active {
+  border-bottom: 3px solid #fbb03b;
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
 }
