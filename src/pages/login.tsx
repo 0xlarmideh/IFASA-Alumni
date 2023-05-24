@@ -22,8 +22,8 @@ const Login = () => {
   const inputClassName =
     "border-2 border-slate-400 p-4 rounded-[10px] bg-primary text-white focus:border-orange-400 focus:bg-tertiary outline-none invalid:border-red-600 invalid:text-red-700 ";
   return (
-    <div className="gradient w-full h-full ">
-      <div className="h-screen text-black mx-auto my-0 max-w-[450px] p-4">
+    <div className="w-full h-full p-8 mb-[4rem] ">
+      <div className="h-full max-md:h-screen text-black mx-auto my-0 max-w-[450px] px-4 ">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
           <h1 className="text-[3.2rem] max-md:text-[2.7rem] heading text-white text-center leading-[3.4rem] tracking-tighter my-6">
             Sign in to IFASA Hub
@@ -82,6 +82,39 @@ const Login = () => {
           </span>
         </div>
       </div>
+      <style jsx global>
+        {`
+          body {
+             background: linear-gradient(
+    to right top,
+    #02252e,
+    #00565b,
+    #008a6a,
+    #0dbe57,
+    #a8eb12
+  );
+
+  background: -moz-linear-gradient(
+    to right top,
+    #02252e,
+    #00565b,
+    #008a6a,
+    #0dbe57,
+    #a8eb12
+  );
+
+  background: -webkit-linear-gradient(
+    to right top,
+    #02252e,
+    #00565b,
+    #008a6a,
+    #0dbe57,
+    #a8eb12
+  );
+}
+          }
+        `}
+      </style>
     </div>
   );
 };

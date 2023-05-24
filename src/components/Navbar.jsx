@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   const router = useRouter();
   return (
-    <div className="bg-primary_light text-white pt-[4rem] ">
-      <div className="mx-auto my-[0] max-w-[750px] border-b-2 border-text_grey ">
+    <div className="bg-primary_light text-white pt-[4rem] w-full ">
+      <div className="mx-auto my-[0] max-w-[600px] border-b-2 border-text_grey ">
         <input placeholder="search" className="font-italic text-[2rem] p-2 bg-transparent " />
       </div>
       <div className="flex justify-between">
