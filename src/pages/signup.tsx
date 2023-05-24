@@ -89,7 +89,7 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="p-[10px] rounded-full bg-secondary text-white "
+            className="p-[10px] rounded-full bg-secondary text-white font-medium  "
           >
             Sign Up
           </button>

@@ -64,13 +64,13 @@ const Login = () => {
 
           <button
             type="submit"
-            className="p-[10px] bg-secondary text-black rounded-full "
+            className="p-[10px] bg-secondary text-black rounded-full font-medium  "
           >
             Login
           </button>
           <button
             type="button"
-            className="border-2 p-[10px] rounded-full bg-black text-white "
+            className="border-2 p-[10px] rounded-full bg-black text-white font-medium  "
           >
             Forgot password
           </button>

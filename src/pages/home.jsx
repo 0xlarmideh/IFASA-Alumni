@@ -7,8 +7,8 @@ import Link from "next/link";
 const Home = () => {
   
   return (
-    <div className="bg-primary h-screen">
-      <div className="max-w-[600px] p-4 mx-auto my-[0] ">
+    <div className="bg-primary min-h-screen w-full  ">
+      <div className=" p-4 mx-auto my-[0] ">
         <div className="flex justify-between border-b-2 border-text_grey py-4">
           <p className="text-text_grey text-[1.2rem] ">
             Welcome <strong className="text-white">John Doe</strong>
@@ -16,7 +16,7 @@ const Home = () => {
           <Icon icon="bi:bell-fill" color="#70858C" width="32" />
         </div>
         <SwiperComp />
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center  ">
           <Icon
             icon="pixelarticons:search"
             rotate={1}
@@ -25,7 +25,7 @@ const Home = () => {
           />
           <input
             placeholder="search"
-            className="font-italic text-[2.4rem] p-2 bg-transparent "
+            className="font-italic text-[2.4rem] max-md:text-[1.6rem] p-2 bg-transparent "
           />
         </div>
         <div className="grid grid-cols-[1fr_0.7fr] gap-4 ">
