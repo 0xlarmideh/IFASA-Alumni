@@ -20,11 +20,18 @@ const Jobs = () => {
     },
   ];
   return (
-    <div className="h-screen bg-primary">
+    <div className="">
       <Navbar />
-      <div className='px-[4.8rem] py-[3.6rem] '>
+      <div className="px-[4.8rem] max-md:px-[0.6rem] py-[3.6rem] ">
         <JobDetails props={jobData} />
       </div>
+      <style jsx global>
+        {`
+          body {
+             background: #02252e
+          }
+        `}
+      </style>
     </div>
   );
 }
