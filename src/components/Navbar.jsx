@@ -21,6 +21,7 @@ const Navbar = () => {
         >
           Events
         </Link>
+
       </div>
     </div>
   );
