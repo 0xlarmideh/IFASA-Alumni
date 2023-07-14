@@ -1,12 +1,12 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import axiosInstance from "../utils/api/axiosInstance";
 
 type Inputs = {
-  email: String;
-  password: String;
-  password2?: String;
+  userName: String;
+  firstName: String;
+  lastName: String;
+  interests: String;
 };
 
 const SignUp = () => {
@@ -16,12 +16,10 @@ const SignUp = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const router = useRouter();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    
     const response = await axiosInstance.post(
-      "/auth/preSignUp",
+      "/auth/register",
       data,
       {
         headers: {
@@ -29,10 +27,7 @@ const SignUp = () => {
         },
       }
     );
-    console.log(response);
-    if (response.data.success) {
-      router.push("/signup2");
-    }
+    console.log(response.data.success);
   };
 
   const inputClassName =
@@ -44,30 +39,33 @@ const SignUp = () => {
           <h1 className="text-[3.2rem] max-md:text-[2.7rem] heading text-white text-center leading-[3.4rem] tracking-tighter my-6">
             Join IFASA Hub today
           </h1>
-                    <input
-            {...register("email", {
-              required: "Please input a valid email address",
-              pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-            })}
-            placeholder="Email address"
-            className={inputClassName}
-          />
-          
           <input
-            placeholder="Password"
-            {...register("password", {
-              required: "Please input a strong password",
-              pattern: /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+            {...register("userName", {
+              required: "Please input a usernme",
             })}
+            placeholder="Username"
             className={inputClassName}
           />
 
           <input
-            placeholder="Confirm Password"
-            {...register("password2", {
-              required: "Please input a strong password",
-              pattern: /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+            {...register("firstName", {
+              required: "Please input your first name",
             })}
+            placeholder="First Name"
+            className={inputClassName}
+          />
+          <input
+            {...register("lastName", {
+              required: "Please input your last name",
+            })}
+            placeholder="Last Name"
+            className={inputClassName}
+          />
+          <input
+            {...register("interests", {
+              required: "Please input your interests",
+            })}
+            placeholder="Interests"
             className={inputClassName}
           />
 

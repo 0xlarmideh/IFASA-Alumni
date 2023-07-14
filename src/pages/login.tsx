@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import apiClient from "./api/apiClient";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import axiosInstance from "../utils/api/axiosInstance";
 
 
 type Inputs = {
@@ -14,9 +15,18 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
+  const router = useRouter()
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    console.log(data)
+    const response = await axiosInstance.post("/auth/login", data, {
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    console.log(response);
+    if (response.data.success) {
+      router.push("/home");
+    }
 
   };
   const inputClassName =

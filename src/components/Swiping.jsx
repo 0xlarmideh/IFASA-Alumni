@@ -18,8 +18,6 @@ const Swiping = () => {
       autoplay={{ delay: 2500, }}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide className="swiper-slide bg-orange-700 ">Slide 1</SwiperSlide>
       <SwiperSlide className="swiper-slide bg-sky-700 ">Slide 2</SwiperSlide>

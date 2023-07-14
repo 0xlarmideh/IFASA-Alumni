@@ -20,7 +20,9 @@ const Home = () => {
               Welcome <strong className="text-white">John Doe</strong>
             </p>
             {/* <Icon icon="bi:bell-fill" color="#70858C" width="32" /> */}
-            <PopoverNotificationCenter onNotificationClick={() => {}}>
+            <PopoverNotificationCenter
+              onNotificationClick={() => {}}
+            >
               {({ unseenCount }) => (
                 <NotificationBell unseenCount={unseenCount || 0} />
               )}
@@ -39,20 +41,18 @@ const Home = () => {
             />
             <input
               placeholder="search"
-              className="font-italic text-[2.4rem] max-md:text-[1.6rem] p-2 bg-transparent "
+              className="font-italic border-b-[2px] border-text_grey focus:outline-none text-white text-[2.4rem] max-md:text-[1.6rem] p-2 bg-transparent "
             />
           </div>
           <br />
 
           <div className="grid grid-cols-[1fr_0.7fr] gap-4 ">
-            
-              <Link
-                className="h-[180px] bg-slate-600 rounded-[10px] text-white text-[2rem] p-8 "
-                href="/jobs"
-              >
-                Jobs
-              </Link>
-           
+            <Link
+              className="h-[300px] bg-slate-600 rounded-[10px] text-white text-[2rem] p-8 "
+              href="/jobs"
+            >
+              Jobs
+            </Link>
 
             <div className="flex flex-col gap-4 ">
               <div className="bg-black h-[50%] w-full rounded-[10px] ">v</div>
