@@ -1,0 +1,2 @@
+export const inputClassName =
+  "border-2 border-slate-400 p-4 rounded-[10px] bg-primary text-white focus:border-orange-400 focus:bg-tertiary outline-none w-full invalid:border-red-600 invalid:text-red-700 ";
