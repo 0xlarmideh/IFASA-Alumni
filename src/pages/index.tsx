@@ -20,12 +20,6 @@ export default function Home() {
         >
           Login to IFASA Hub
         </Link>
-        {/* <Link
-          href="/signup"
-          className=" py-[15px] px-6 rounded-full bg-black text-white "
-        >
-          Create an account
-        </Link> */}
       </div>
     </main>
   );

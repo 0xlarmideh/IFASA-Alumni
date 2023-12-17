@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-const JobDetails = ({props}) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const JobDetails = ({props}: {props: any}) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
     <div className="bg-primary text-white">
-      {props.map((item, index) => {
+      {props.map((item: any, index: number) => {
         return (
           <div
             key={index}

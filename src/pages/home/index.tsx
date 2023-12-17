@@ -1,11 +1,9 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import SwiperComp from "../components/SwiperComp";
+import SwiperComp from "../../components/SwiperComp";
 import Link from "next/link";
 
-
 const Home = () => {
-  
   return (
     <div className=" jsx w-full py-4 mb-8  ">
       <div className=" p-4 mx-auto my-[0] ">
