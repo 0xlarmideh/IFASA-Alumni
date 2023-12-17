@@ -123,12 +123,8 @@ const SignUp = () => {
               <input
                 placeholder="Confirm Password"
                 {...register("password2", {
-                 
-                  validate: (val: string) => {
-                    if (watch("password1") != val) {
-                      return "Your passwords do no match";
-                    }
-                  },
+                  validate: (value) =>
+                    value === watch("password1") || "Passwords do not match",
                 })}
                 className={inputClassName}
               />
